@@ -19,8 +19,7 @@ const useNotificationStore = create((set, get) => ({
   },
 }))
 
-export const useNotification = () =>
-  useNotificationStore((state) => state.notification)
+export const useNotification = () => useNotificationStore((state) => state.notification)
 
 export const showNotification = (message) => {
   useNotificationStore.getState().actions.setNotification(message)

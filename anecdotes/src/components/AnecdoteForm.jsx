@@ -5,7 +5,7 @@ const AnecdoteForm = () => {
 
   const handleAnecdoteCreation = (e) => {
     e.preventDefault()
-    const content = e.target.new.value
+    const content = e.target.anecdote.value
     e.target.reset()
     add(content)
   }
@@ -15,7 +15,7 @@ const AnecdoteForm = () => {
       <h2>create new</h2>
       <form onSubmit={handleAnecdoteCreation}>
         <div>
-          <input data-testid="new" name="new" />
+          <input data-testid="new" name="anecdote" />
         </div>
         <button type="submit">create</button>
       </form>
